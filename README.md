@@ -1,31 +1,28 @@
 # e2e-Playwright
-Projeto end2end para automação de testes utilizando Playwright
-</br>
 End-to-end testing automation project using Playwright.
 
 ## Getting Started
 
-In order to execute this project you must follow the steps below:
-
+### Prerequisites
 1. Install [Node JS](https://nodejs.org/) (version >= 12.x)
-1. Run `npm i --save-dev` to install all the project dependencies
-1. Run `npx playwright install` to install the browsers used by Playwright
-1. Run `npm run ci` to execute the entire test suite
-1. Run `npm run show-report` to visualize the reports
 
-All execution artifacts can be found in `./artifacts`, if you want to remove these files run `npm run clean`.
+### Installation
+1. Run the command `npm i --save-dev` to install all project dependencies.
+2. Execute `npx playwright install` to install the browsers required by Playwright.
 
+### Running Tests
+1. Execute `npm run ci` to run the entire test suite.
+2. Use `npm run show-report` to visualize the generated reports.
+
+All generated artifacts can be found in the `./artifacts` directory. To remove these files, run `npm run clean`.
 
 ## Project Structure
-</br>
-<ul>
-    <li>Scenarios: Test scenario mapping</li>
-    <li>Support: Project structure files
-        <ul>
-            <li>Elements: Mapping the elements of each screen</li>
-            <li>Fixtures: Data configuration files</li>
-            <li>Pages: Logic used to perform actions in tests</li>
-        </ul>
-    </li>
-</ul>
+The project is organized as follows:
 
+- **Scenarios**: Contains mappings for test scenarios.
+- **Support**: Includes project structure files.
+  - **Elements**: Maps elements on each screen.
+  - **Fixtures**: Configuration files for test data.
+  - **Pages**: Contains logic used to perform actions in tests.
+
+Feel free to reach out if you have any questions or need further assistance with the project. Happy testing!
