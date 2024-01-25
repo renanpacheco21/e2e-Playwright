@@ -26,3 +26,7 @@ The project is organized as follows:
   - **Pages**: Contains logic used to perform actions in tests.
 
 Feel free to reach out if you have any questions or need further assistance with the project. Happy testing!
+
+---
+
+*Author: Renan Pacheco*
