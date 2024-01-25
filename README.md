@@ -29,4 +29,4 @@ Feel free to reach out if you have any questions or need further assistance with
 
 ---
 
-*Author: Renan Pacheco*
+*Copyright (c) 2024 Renan Pacheco*
