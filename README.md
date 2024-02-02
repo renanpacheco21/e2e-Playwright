@@ -22,6 +22,7 @@ The project is organized as follows:
 - **Scenarios**: Contains mappings for test scenarios.
 - **Support**: Includes project structure files.
   - **Elements**: Maps elements on each screen.
+  - **Files**: Other files required for the test.
   - **Fixtures**: Configuration files for test data.
   - **Pages**: Contains logic used to perform actions in tests.
 
