@@ -13,9 +13,12 @@ test.describe('Teste de Preenchimento de Formulário', () => {
   test.beforeEach(async ({ page }) => {
     formularioPage = new FormularioPage(page);
     await page.goto(BASE_URL);
+    await page.evaluate(() => {
+      window.moveTo(0, 0);
+    });
   });
 
-  test('Preencher formulário de teste', async () => {
+  test('Formulário de Cadastro de Estudante', async () => {
     await formularioPage.preencherFormulario();
   });
 });

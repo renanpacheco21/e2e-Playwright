@@ -38,4 +38,46 @@ export default class FormularioElements extends BaseElements {
   getDataNascimento(): Locator {
     return this.page.locator('input[id=dateOfBirthInput]');
   }
+
+  getMesNascimento(): Locator {
+    return this.page.locator('select[class=react-datepicker__month-select]');
+  }
+
+  getAnoNascimento(): Locator {
+    return this.page.locator('select[class=react-datepicker__year-select]');
+  }
+
+  getDiaNascimento(): Locator {
+    return this.page.locator(
+      '#dateOfBirth > div.react-datepicker__tab-loop > div.react-datepicker-popper > div > div > div.react-datepicker__month-container > div.react-datepicker__month > div:nth-child(3) > div.react-datepicker__day.react-datepicker__day--019'
+    );
+  }
+
+  getAssunto(): Locator {
+    return this.page.locator('#subjectsInput');
+  }
+
+  getHobbies(): Locator {
+    return this.page.locator('#hobbies-checkbox-1');
+  }
+
+  getCampoAnexo(): Locator {
+    return this.page.locator('#uploadPicture');
+  }
+
+  getEndereco(): Locator {
+    return this.page.locator('#currentAddress');
+  }
+
+  getEstado(): Locator {
+    return this.page.locator('#state');
+  }
+
+  getCidade(): Locator {
+    return this.page.locator('#city');
+  }
+
+  getBotaoEnviar(): Locator {
+    return this.page.locator('#submit');
+  }
 }

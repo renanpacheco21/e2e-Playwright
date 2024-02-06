@@ -8,10 +8,10 @@ const config: PlaywrightTestConfig = {
     trace: 'on',
     locale: 'pt-BR',
     headless: false,
-    viewport: { width: 1280, height: 720 },
+    viewport: { width: 1366, height: 768 },
     ignoreHTTPSErrors: true,
     screenshot: 'on',
-    video: 'off'
+    video: 'on'
   },
   expect: {
     timeout: 30000
