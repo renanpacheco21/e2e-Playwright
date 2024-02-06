@@ -16,27 +16,27 @@ export default class FormularioElements extends BaseElements {
   }
 
   getCampoNome(): Locator {
-    return this.page.locator('input[id=firstName]');
+    return this.page.locator('#firstName');
   }
 
   getCampoSobrenome(): Locator {
-    return this.page.locator('input[id=lastName]');
+    return this.page.locator('#lastName');
   }
 
   getEmail(): Locator {
-    return this.page.locator('input[id=userEmail]');
+    return this.page.locator('#userEmail');
   }
 
   getGenero(): Locator {
-    return this.page.locator('input[id=gender-radio-1]');
+    return this.page.locator('#gender-radio-1');
   }
 
   getTelefone(): Locator {
-    return this.page.locator('input[id=userNumber]');
+    return this.page.locator('#userNumber');
   }
 
   getDataNascimento(): Locator {
-    return this.page.locator('input[id=dateOfBirthInput]');
+    return this.page.locator('#dateOfBirthInput');
   }
 
   getMesNascimento(): Locator {
