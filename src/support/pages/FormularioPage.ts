@@ -1,5 +1,6 @@
 import { Page, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
+
 import FormularioElements from '../elements/FormularioElements';
 import BasePage from './BasePage';
 
@@ -45,11 +46,20 @@ export default class CadastroPage extends BasePage {
     await this.formularioElements
       .getEndereco()
       .type(faker.address.streetAddress());
+    await this.formularioElements.getEstado().click();
     await this.formularioElements.getEstado().type('Haryana');
     await this.page.keyboard.press('Tab');
+    await this.formularioElements.getCidade().click();
     await this.formularioElements.getCidade().type('Panipat');
     await this.page.keyboard.press('Tab');
     await this.formularioElements.getBotaoEnviar().click();
     await this.page.waitForTimeout(5000);
+  }
+
+  async validarFormulario(): Promise<void> {
+    await expect(
+      this.formularioElements.getMensagemCadastroEnviado()
+    ).toBeVisible();
+    await this.formularioElements.getBotaoFechar().click();
   }
 }

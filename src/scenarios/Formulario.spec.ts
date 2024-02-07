@@ -20,5 +20,6 @@ test.describe('Teste de Preenchimento de Formulário', () => {
 
   test('Formulário de Cadastro de Estudante', async () => {
     await formularioPage.preencherFormulario();
+    await formularioPage.validarFormulario();
   });
 });

@@ -80,4 +80,12 @@ export default class FormularioElements extends BaseElements {
   getBotaoEnviar(): Locator {
     return this.page.locator('#submit');
   }
+
+  getMensagemCadastroEnviado(): Locator {
+    return this.page.locator('text=Thanks for submitting the form');
+  }
+
+  getBotaoFechar(): Locator {
+    return this.page.locator('#closeLargeModal');
+  }
 }
