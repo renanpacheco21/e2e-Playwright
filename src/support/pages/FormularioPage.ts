@@ -53,7 +53,6 @@ export default class CadastroPage extends BasePage {
     await this.formularioElements.getCidade().type('Panipat');
     await this.page.keyboard.press('Tab');
     await this.formularioElements.getBotaoEnviar().click();
-    await this.page.waitForTimeout(5000);
   }
 
   async validarFormulario(): Promise<void> {
