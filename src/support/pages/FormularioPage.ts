@@ -59,6 +59,7 @@ export default class CadastroPage extends BasePage {
     await expect(
       this.formularioElements.getMensagemCadastroEnviado()
     ).toBeVisible();
+    await this.page.setViewportSize({ width: 1366, height: 860 });
     await this.formularioElements.getBotaoFechar().click();
   }
 }
