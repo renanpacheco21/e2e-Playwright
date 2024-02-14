@@ -14,5 +14,7 @@ export default class LivrariaPage extends BasePage {
 
   async acessarLivraria(): Promise<void> {
     await this.livrariaElements.getBotaoBookStore().click();
+    await this.livrariaElements.getBotaoLogin().click();
+    await this.livrariaElements.getNovoUsuario().click();
   }
 }

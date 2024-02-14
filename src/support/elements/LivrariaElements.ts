@@ -10,4 +10,12 @@ export default class LivrariaElements extends BaseElements {
   getBotaoBookStore(): Locator {
     return this.page.locator('text=Book Store Application');
   }
+
+  getBotaoLogin(): Locator {
+    return this.page.locator('#login');
+  }
+
+  getNovoUsuario(): Locator {
+    return this.page.locator('#newUser');
+  }
 }
