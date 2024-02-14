@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker';
 import FormularioElements from '../elements/FormularioElements';
 import BasePage from './BasePage';
 
-export default class CadastroPage extends BasePage {
+export default class FormularioPage extends BasePage {
   readonly formularioElements: FormularioElements;
 
   constructor(readonly page: Page) {
