@@ -19,6 +19,6 @@ test.describe('Teste de Livraria Online', () => {
   });
 
   test('Formulário de Cadastro de Estudante', async () => {
-    await livrariaPage.acessarLivraria();
+    await livrariaPage.acessarLivrariaLogin();
   });
 });
