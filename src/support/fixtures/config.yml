@@ -1,2 +1,3 @@
 application:
   base_url: "https://demoqa.com/"
+  books_url: "https://demoqa.com/books"

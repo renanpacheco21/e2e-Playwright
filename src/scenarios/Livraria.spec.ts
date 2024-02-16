@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import { join } from 'path';
 import { TheConfig } from 'sicolo';
 import LivrariaPage from '../support/pages/LivrariaPage';
@@ -7,7 +7,7 @@ test.describe('Teste de Livraria Online', () => {
   let livrariaPage: LivrariaPage;
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   const BASE_URL = TheConfig.fromFile(CONFIG)
-    .andPath('application.base_url')
+    .andPath('application.books_url')
     .retrieveData();
 
   test.beforeEach(async ({ page }) => {
@@ -18,7 +18,14 @@ test.describe('Teste de Livraria Online', () => {
     });
   });
 
-  test('Formulário de Cadastro de Estudante', async () => {
-    await livrariaPage.acessarLivrariaLogin();
+  test('Acessar Livraria e Realizar Login', async () => {
+    await livrariaPage.realizarLogin();
+    const validaLogin = await livrariaPage.page
+      .waitForSelector('text=Invalid username or password!', { timeout: 5000 })
+      .catch(() => null);
+    if (validaLogin) {
+      await livrariaPage.realizarCadastroUsuario();
+      await livrariaPage.realizarLogin();
+    }
   });
 });

@@ -34,4 +34,16 @@ export default class LivrariaElements extends BaseElements {
   getSenha(): Locator {
     return this.page.locator('#password');
   }
+
+  getBotaoRegistro(): Locator {
+    return this.page.locator('#register');
+  }
+
+  getBotaoRetornarLogin(): Locator {
+    return this.page.locator('#gotologin');
+  }
+
+  getUsuarioLogado(): Locator {
+    return this.page.locator('#userName-value');
+  }
 }
